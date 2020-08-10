@@ -10,7 +10,7 @@ import UserError from '../utils/userError';
 
 const router: Router = express.Router();
 
-router.use(express.static(`${__dirname}/../../build`));
+router.use(express.static(path.join(__dirname, '/../../build')));
 router.get('/', (req: Request, res: Response) => {
   res.send('HomePage');
 });
