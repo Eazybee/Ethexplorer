@@ -1,12 +1,13 @@
 import { promisify } from 'util';
 import { createClient } from 'redis';
 import { debug } from 'console';
-import { redisHost, redisPort } from '../configs/constant';
+import { redisHost, redisPort, redisPassword } from '../configs/constant';
 
 const createClientFunction = () => {
   const client = createClient({
     host: redisHost,
     port: Number(redisPort),
+    password: redisPassword,
   });
 
   client.on('ready', () => {

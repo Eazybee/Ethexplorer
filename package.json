@@ -16,7 +16,9 @@
     "front:build": "react-scripts build",
     "front:test": "react-scripts test",
     "front:eject": "react-scripts eject",
-    "production": "npm run front:build && npm run back:build && node dist/index.js"
+    "production": "npm run front:build && npm run back:build && node dist/index.js",
+    "heroku-postbuild": "npm run front:build && npm run back:build",
+    "start": "node dist/index.js"
   },
   "husky": {
     "hooks": {
@@ -28,6 +30,10 @@
     "**/*.ts*": [
       "eslint --fix"
     ]
+  },
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -93,6 +99,5 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Eazybee/Ethexplorer/issues"
-  },
-  "homepage": "https://github.com/Eazybee/Ethexplorer#readme"
+  }
 }
