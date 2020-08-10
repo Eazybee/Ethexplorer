@@ -52,7 +52,7 @@ section.intro {
     width: 90%;
     height: 2px;
     background: #f1f1f1;
-    margin: 3rem;
+    margin: 3rem auto;
   }
 
   > div.logs {
@@ -60,6 +60,37 @@ section.intro {
     width: 100%;
     border-radius: 5px;
     overflow: scroll;
+  }
+}
+
+
+@media screen and  (min-width:461px) and (max-width:700px){
+  section.intro {
+    width: 90%;
+    padding: 2rem .5rem;
+    > div.search > div {
+      &.form {
+        width: 70%;
+      }
+      &:last-child{
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:460px){
+  section.intro {
+    width: 100%;
+    padding: 2rem .5rem;
+    > div.search > div {
+      &.form {
+        width: 100%;
+      }
+      &:last-child{
+        display: none;
+      }
+    }
   }
 }
 
